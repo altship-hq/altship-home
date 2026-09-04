@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file: 'unsafe-inline'; img-src 'self' file:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file: 'unsafe-inline'; img-src 'self' file:; connect-src 'self' https://ydfwwritdksxplvxpbez.supabase.co; base-uri 'none'; form-action 'none'">
 <title>altship. — Infrastructure for agents and the web.</title>
 <meta name="description" content="altship builds infrastructure for agents and the web. Run altship products on your device, your VPS, or altship.">
 <meta property="og:type" content="website">
@@ -20,21 +20,39 @@
 </head>
 <body>
 <div id="altship-refined" aria-label="altship landing page">
-<header class="nav"><a class="brand" href="#altship-top"><img class="brand-mark" src="assets/logo-mark.png" alt="altship" width="30" height="30"><span class="brand-text">altship.</span></a><nav class="links" aria-label="Main navigation"><a href="#altship-products">Products</a><a href="#altship-agents">Agents ↗</a></nav></header>
+<header class="nav"><a class="brand" href="#altship-top"><img class="brand-mark" src="assets/logo-mark.png" alt="altship" width="30" height="30"><span class="brand-text">altship.</span></a><div class="nav-right"><nav class="links" aria-label="Main navigation"><a href="#altship-products">Products</a><a href="#altship-agents">Agents ↗</a></nav><button class="nav-try" id="altship-try-nav" type="button">Try altship</button><div class="account" id="altship-account" hidden><span id="altship-account-email"></span><button class="secondary" id="altship-sign-out" type="button">Sign out</button></div></div></header>
 <section class="hero" id="altship-top"><div><h1>Infrastructure<br>for agents<br><em>and the web.</em></h1><p class="description">Run our products on your own computer, or on ours.</p><div class="actions"><a class="primary" href="#altship-products">Explore products <span aria-hidden="true">↗</span></a><a class="secondary" href="#altship-agents">Agents ↗</a></div></div>
 <div class="art-side"><div class="art" aria-label="Rotating classical paintings of scholars writing"><img class="painting active" src="assets/hero-painting-1.jpg" alt="An elderly scholar writing by candlelight"><img class="painting" src="assets/hero-painting-2.jpg" alt="A scholar in red and green robes writing at a table"><img class="painting" src="assets/hero-painting-3.jpg" alt="A scholar in a red cap writing with a quill"></div></div>
 </section>
 <section class="section" id="altship-products" aria-labelledby="altship-products-title"><div class="section-head"><h2 class="section-title" id="altship-products-title">Find your next building block.</h2><span class="placeholder">Product placeholders</span></div><ul class="products">
-<li><span class="number">01</span><h3>Product one</h3><p class="product-copy">A concise description of the product and the problem it solves.</p><p class="deployment">Supported deployment options to be confirmed.</p><button class="product-link" aria-expanded="false" aria-controls="altship-detail-one">Explore ↗</button><p class="product-detail" id="altship-detail-one" hidden>Product name, capabilities, and destination link will be added here.</p></li>
+<li><span class="number">01</span><h3>MCP Creator</h3><p class="product-copy">Turn an OpenAPI spec into a production-ready, agent-friendly MCP server — validated, tested, and deployed.</p><p class="deployment">Self-hosted (Docker) or managed (Vercel).</p><button class="product-link" aria-expanded="false" aria-controls="altship-detail-one">Explore ↗</button><p class="product-detail" id="altship-detail-one" hidden>Import an OpenAPI spec, review the proposed tool surface, and deploy an MCP server in minutes. <a id="altship-mcp-link" href="#">Open MCP Creator ↗</a></p></li>
 <li><span class="number">02</span><h3>Product two</h3><p class="product-copy">A concise description of the product and the problem it solves.</p><p class="deployment">Supported deployment options to be confirmed.</p><button class="product-link" aria-expanded="false" aria-controls="altship-detail-two">Explore ↗</button><p class="product-detail" id="altship-detail-two" hidden>Product name, capabilities, and destination link will be added here.</p></li>
 <li><span class="number">03</span><h3>Product three</h3><p class="product-copy">A concise description of the product and the problem it solves.</p><p class="deployment">Supported deployment options to be confirmed.</p><button class="product-link" aria-expanded="false" aria-controls="altship-detail-three">Explore ↗</button><p class="product-detail" id="altship-detail-three" hidden>Product name, capabilities, and destination link will be added here.</p></li>
 </ul></section>
 <section class="section" id="altship-agents" hidden aria-labelledby="altship-agents-title"><div class="section-head"><h2 class="section-title" id="altship-agents-title">Find an agent. Put it to work.</h2><span class="placeholder">Coming soon</span></div><p class="docs-copy">An agent marketplace with prebuilt agents from altship. Discover an agent for the task at hand and start with the work you want done.</p><div class="outline"><div><strong>Discover</strong><p>Browse prebuilt agents by what they can help you do.</p></div><div><strong>Choose</strong><p>Find the agent that fits your task.</p></div><div><strong>Get to work</strong><p>Use the agent to help turn your task into a result.</p></div></div></section>
 <footer class="footer"><span>altship.</span><nav class="footer-links" aria-label="Social links"><a href="#" aria-disabled="true">GitHub</a><a href="#" aria-disabled="true">X</a><a href="#" aria-disabled="true">LinkedIn</a></nav><span>Build what's next. Run it your way.</span></footer>
 <div class="product-preview" role="tooltip" id="altship-hover-preview"><div class="preview-label">Product preview</div><div class="preview-title"></div><p class="preview-copy">Product details will appear here once the catalogue is added.</p><div class="preview-bottom">Deployment options to be confirmed</div></div>
+<div class="auth-modal" id="altship-auth-modal" hidden role="dialog" aria-modal="true" aria-labelledby="altship-auth-title">
+<div class="auth-panel">
+<button class="auth-close" id="altship-auth-close" type="button" aria-label="Close">✕</button>
+<h2 id="altship-auth-title">Sign in to altship</h2>
+<p class="auth-subtitle">One account, every altship product.</p>
+<label for="altship-auth-email">Email</label>
+<input id="altship-auth-email" type="email" autocomplete="email">
+<label for="altship-auth-password">Password</label>
+<input id="altship-auth-password" type="password" autocomplete="current-password">
+<p class="auth-message" id="altship-auth-message" hidden></p>
+<div class="auth-actions">
+<button class="secondary" id="altship-auth-toggle" type="button">Need an account? Sign up</button>
+<button class="primary" id="altship-auth-submit" type="button">Sign in</button>
+</div>
+</div>
+</div>
 </div>
 
 
+<script src="js/vendor/supabase.js" defer></script>
+<script src="js/auth.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
