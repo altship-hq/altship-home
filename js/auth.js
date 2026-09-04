@@ -4,7 +4,8 @@
   // Supabase project, never grants privileged access on its own).
   var SUPABASE_URL = 'https://ydfwwritdksxplvxpbez.supabase.co';
   var SUPABASE_ANON_KEY = 'sb_publishable_OEiSmw7ZjpnWG8ShtCuXbA__XGQf6pA';
-  var MCP_APP_URL = 'https://mcp.altship.io';
+  // TODO: switch to https://mcp.altship.io once its DNS record is added.
+  var MCP_APP_URL = 'https://altship-mcp-web.vercel.app';
 
   // Session storage is a cookie (not localStorage) scoped to the parent
   // domain, so signing in here is visible to every altship-*.altship.io
