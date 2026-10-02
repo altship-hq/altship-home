@@ -1,4 +1,5 @@
-// Local dev server for this static site, with the /mcp -> /mcp/ redirect from vercel.json.
+// Local dev server for this static site, with the /mcp, /privacy and /terms
+// trailing-slash redirects from vercel.json.
 //
 //   node dev.mjs             -> http://localhost:8000
 //   PORT=3000 node dev.mjs
@@ -37,8 +38,8 @@ function notFound(res) {
 
 const server = http.createServer((req, res) => {
   const pathname = req.url.split('?')[0];
-  if (pathname === '/mcp') {
-    res.writeHead(308, { Location: '/mcp/' + req.url.slice(4) });
+  if (['/mcp', '/privacy', '/terms'].includes(pathname)) {
+    res.writeHead(308, { Location: pathname + '/' + req.url.slice(pathname.length) });
     return res.end();
   }
   serveStatic(req, res);

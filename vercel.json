@@ -1,3 +1,7 @@
 {
-  "redirects": [{ "source": "/mcp", "destination": "/mcp/", "permanent": true }]
+  "redirects": [
+    { "source": "/mcp", "destination": "/mcp/", "permanent": true },
+    { "source": "/privacy", "destination": "/privacy/", "permanent": true },
+    { "source": "/terms", "destination": "/terms/", "permanent": true }
+  ]
 }

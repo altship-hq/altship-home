@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' file: 'unsafe-inline'; img-src 'self' file:; base-uri 'none'; form-action 'none'">
+<title>Privacy Policy — altship.</title>
+<meta name="description" content="How altship collects, uses and protects your information.">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/css/legal.css?v=1">
+</head>
+<body>
+<div class="legal">
+<header class="legal-nav"><a class="legal-brand" href="/" aria-label="altship home"><img src="/assets/logo-mark.png" alt="" width="28" height="28"><span>altship.</span></a><nav aria-label="Legal"><a href="/privacy/" aria-current="page">Privacy</a><a href="/terms/">Terms</a><a href="/">Home</a></nav></header>
+<main>
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: 2 October 2026</p>
+
+<div class="summary">
+<p><strong>In short:</strong> we collect what we need to sign you in and run the products you use — your account details from GitHub or Google, and the specs, servers and agents you create. We don't sell your data, we don't show ads, and we don't use your content to train AI models. You can ask us to delete your data at any time.</p>
+</div>
+
+<h2>1. Who we are</h2>
+<p>altship ("altship", "we", "us") provides developer infrastructure for agents and the web, including MCP Creator and Agent Creator, through the website altship.io and the dashboard at pilot.altship.io (together, the "Service"). altship is operated by an individual based in the United Kingdom, who is the data controller for the personal data described in this policy.</p>
+<p>You can contact us about anything in this policy at <a href="mailto:hello@altship.io">hello@altship.io</a>.</p>
+
+<h2>2. Information we collect</h2>
+<p><strong>Account information.</strong> When you sign in with GitHub or Google, we receive your name, email address, profile picture and the account identifier that provider assigns to you. We don't receive your GitHub or Google password, and we don't request access to your repositories, files, contacts or other data held by those providers.</p>
+<p><strong>Content you provide.</strong> To use the Service you give us content, including:</p>
+<ul>
+<li>OpenAPI specifications, or URLs we fetch them from, and the tool names, descriptions and selections derived from them;</li>
+<li>configuration for the MCP servers you generate or deploy, including the API's title, the tools you expose and the authentication mode;</li>
+<li>agent names, descriptions and plans you create in Agent Creator;</li>
+<li>messages you send to your agents, and the agents' replies. We store a short preview (up to 280 characters) of each conversation's input and output so you can see your agents' run history.</li>
+</ul>
+<p><strong>API credentials.</strong> If you deploy a managed MCP server for an API that needs a credential (such as an API key or bearer token), you give us that credential. It is stored only as an encrypted environment variable on the hosting platform that runs your server. It is never written into generated source code, and we take care to keep it out of logs, error messages and AI prompts.</p>
+<p><strong>Technical information.</strong> Like most websites, our hosting provider records basic request information when you use the Service, such as IP address, browser type, the pages or endpoints requested, and timestamps. We use this to keep the Service running and secure.</p>
+<p><strong>Your servers' traffic.</strong> Managed MCP servers we deploy for you call your API on behalf of the agents and clients that connect to them. That traffic passes through our hosting provider, which records request metadata as described above.</p>
+
+<h2>3. How we use your information</h2>
+<ul>
+<li>To provide the Service: signing you in, validating your specs, generating and deploying your MCP servers, and creating and running your agents.</li>
+<li>To show you your own servers, agents and run history, and keep them separate from other users'.</li>
+<li>To keep the Service secure and reliable, including detecting abuse and investigating errors.</li>
+<li>To contact you about your account or important changes to the Service. We won't send you marketing email without your consent.</li>
+<li>To comply with legal obligations.</li>
+</ul>
+<p>We do not sell your personal data, we do not use it for advertising, and we do not use your content to train AI models.</p>
+
+<h2>4. Legal bases (UK GDPR)</h2>
+<p>We process your personal data because it is necessary to perform our contract with you (providing the Service you signed up for); for our legitimate interests in operating, securing and improving the Service, balanced against your rights; to comply with legal obligations; and, where we ask for it, with your consent, which you can withdraw at any time.</p>
+
+<h2>5. Who we share it with</h2>
+<p>We share personal data only with the service providers that run parts of the Service for us, and only as far as they need it:</p>
+<ul>
+<li><strong>Supabase</strong>: sign-in and our database (your account, servers, agents and run previews).</li>
+<li><strong>Vercel</strong>: hosting for altship.io, the dashboard, our API, and the managed MCP servers you deploy, including your encrypted API credentials.</li>
+<li><strong>Anthropic</strong>: runs the AI models behind Agent Creator. When you plan or run an agent, the agent's instructions, your messages and the tool results it works with are sent to Anthropic to generate responses.</li>
+<li><strong>GitHub and Google</strong>: sign-in only. Their own privacy policies apply to your accounts with them.</li>
+</ul>
+<p>We may also disclose information if required by law, to protect the rights, safety or property of our users or others, or as part of a sale or reorganisation of the Service, in which case this policy would continue to apply to your data.</p>
+
+<h2>6. International transfers</h2>
+<p>Our service providers may process data outside the United Kingdom, including in the United States. Where they do, we rely on appropriate safeguards such as the UK International Data Transfer Addendum to the EU Standard Contractual Clauses, or the UK–US data bridge, as provided in those providers' data processing terms.</p>
+
+<h2>7. How long we keep it</h2>
+<p>We keep your account information and content for as long as your account is active. Servers, agents and run history stay until you delete them or your account. When you ask us to delete your account, we delete your personal data from our systems within 30 days, except where we must keep something to comply with the law. Hosting logs are kept for the limited periods set by our hosting provider. Deleting your account doesn't automatically delete copies of generated code you have downloaded.</p>
+
+<h2>8. Security</h2>
+<p>We use encryption in transit (HTTPS), store API credentials encrypted, restrict access to our database to our own servers, and check that every request to the dashboard API comes from a signed-in user who owns the data requested. No system is perfectly secure, but we work to protect your information and will tell you without undue delay if a breach affects your personal data.</p>
+
+<h2>9. Your rights</h2>
+<p>Under UK data protection law you have the right to:</p>
+<ul>
+<li>access the personal data we hold about you;</li>
+<li>have inaccurate data corrected;</li>
+<li>have your data deleted;</li>
+<li>restrict or object to how we process it;</li>
+<li>receive your data in a portable format;</li>
+<li>withdraw consent where we rely on it.</li>
+</ul>
+<p>To exercise any of these, email <a href="mailto:hello@altship.io">hello@altship.io</a>. We'll respond within one month. If you're unhappy with how we handle your data, you can complain to the Information Commissioner's Office at <a href="https://ico.org.uk">ico.org.uk</a>, but we'd appreciate the chance to put things right first.</p>
+
+<h2>10. Cookies and browser storage</h2>
+<p>altship.io doesn't use cookies, analytics or tracking scripts. The dashboard at pilot.altship.io uses your browser's local storage only to keep you signed in. We don't use advertising or third-party tracking cookies.</p>
+
+<h2>11. Children</h2>
+<p>The Service is intended for developers and businesses and is not directed at children. You must be at least 18 to use it, and we don't knowingly collect personal data from anyone under 18.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>We may update this policy as the Service changes. We'll post the new version here with a new "Last updated" date and, if the changes are significant, let you know by email or in the dashboard before they take effect.</p>
+
+<h2>13. Contact</h2>
+<p>Questions or requests about your privacy: <a href="mailto:hello@altship.io">hello@altship.io</a>.</p>
+</main>
+<footer class="legal-footer"><span>altship.</span><nav aria-label="Legal"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:hello@altship.io">Contact</a></nav></footer>
+</div>
+</body>
+</html>
