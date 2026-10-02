@@ -13,11 +13,21 @@ assets/            Logo, favicon, social thumbnail, hero images
 
 ## Running locally
 
-Static site, no build step. Either open `index.html` directly, or serve it:
+Static site, no build step. Serve it with the dev server (Node, no dependencies):
 
 ```
-python3 -m http.server 8000
+node dev.mjs
 ```
 
 then visit `http://localhost:8000`.
-# altship-home
+
+In production, `/mcp/` is the MCP Creator landing page from the `altship-mcp`
+repo (`apps/site`), served via the rewrite in `vercel.json`. `dev.mjs` mirrors
+that locally by forwarding `/mcp/*` to its Vite dev server, so run that too:
+
+```
+# in your altship-mcp checkout
+cd apps/site && npm run dev   # http://localhost:5174/mcp/
+```
+
+Set `PORT` or `MCP_DEV_URL` to change either address.
