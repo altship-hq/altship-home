@@ -1,4 +1,3 @@
 {
-  "redirects": [{ "source": "/mcp", "destination": "/mcp/", "permanent": true }],
-  "rewrites": [{ "source": "/mcp/:path*", "destination": "https://altship-pilot.vercel.app/mcp/:path*" }]
+  "redirects": [{ "source": "/mcp", "destination": "/mcp/", "permanent": true }]
 }

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file: 'unsafe-inline'; img-src 'self' file:; base-uri 'none'; form-action 'none'">
+<title>MCP Creator — altship.</title>
+<meta name="description" content="Turn an OpenAPI spec into a production-ready, agent-friendly MCP server — validated, tested, and deployed.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MCP Creator — altship.">
+<meta property="og:description" content="Turn an OpenAPI spec into a production-ready, agent-friendly MCP server — validated, tested, and deployed.">
+<meta property="og:image" content="/assets/social-thumbnail.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/css/mcp.css?v=1">
+</head>
+<body>
+<div class="mx">
+<header class="nav" id="mx-nav"><a class="brand" href="/" aria-label="altship home"><img class="brand-mark" src="/assets/logo-mark.png" alt="" width="30" height="30"><span class="brand-text">altship.</span><span class="brand-product">MCP Creator</span></a><button class="nav-toggle" id="mx-nav-toggle" type="button" aria-expanded="false" aria-controls="mx-nav-menu" aria-label="Open menu"><span></span><span></span><span></span></button><div class="nav-right" id="mx-nav-menu"><nav class="links" aria-label="MCP Creator"><a href="#how">How it works</a><a href="#deploy">Deployment</a><a href="/">altship ↗</a></nav><a class="nav-cta" href="https://pilot.altship.io/mcp" data-dashboard-link>Start building</a></div></header>
+<section class="hero" id="mx-hero"><div><p class="eyebrow">01 — MCP Creator</p><h1>Your API,<br>ready for<br><em>every agent.</em></h1><p class="description">Give us an OpenAPI spec. We validate it, turn it into an agent-friendly MCP server, test it, and deploy it.</p><div class="hero-actions"><a class="primary" href="https://pilot.altship.io/mcp" data-dashboard-link>Start building <span aria-hidden="true">↗</span></a><a class="secondary" href="#how">How it works</a></div></div>
+<figure class="spec-panel" aria-label="An OpenAPI spec's operations becoming MCP tools"><div class="panel-block"><div class="panel-label">openapi.yaml</div><div class="panel-row"><span class="method">GET</span><span>/orders/{id}</span></div><div class="panel-row"><span class="method">POST</span><span>/orders</span></div><div class="panel-row"><span class="method">PATCH</span><span>/orders/{id}</span></div><div class="panel-row"><span class="method">DELETE</span><span>/orders/{id}</span></div></div><div class="panel-arrow" aria-hidden="true">↓</div><div class="panel-block"><div class="panel-label">mcp tools</div><div class="panel-row"><span>orders.get</span><span class="status ready">ready</span></div><div class="panel-row"><span>orders.create</span><span class="status ready">ready</span></div><div class="panel-row"><span>orders.update</span><span class="status ready">ready</span></div><div class="panel-row"><span>orders.delete</span><span class="status destructive">destructive</span></div></div><figcaption>Validated · Tested · Deployed</figcaption></figure>
+</section>
+<section class="section" id="how" aria-labelledby="mx-how-title"><div class="section-head"><h2 class="section-title" id="mx-how-title">From spec to server in four steps.</h2><span class="placeholder">How it works</span></div><ol class="steps">
+<li><span class="number">01</span><h3>Import your spec</h3><p>Point us at an OpenAPI 3.x spec by URL or path. We parse and validate it, and flag anything an agent would trip over.</p></li>
+<li><span class="number">02</span><h3>Review the tools</h3><p>Every operation becomes a tool, grouped by namespace. Destructive and sensitive operations are flagged and start unselected.</p></li>
+<li><span class="number">03</span><h3>Generate the server</h3><p>Get an agent-friendly MCP server for the tools you picked — source, tests and deployment docs included.</p></li>
+<li><span class="number">04</span><h3>Deploy it</h3><p>Ship to a managed endpoint on Vercel, or take the code and run it on your own infrastructure.</p></li>
+</ol></section>
+<section class="section" id="deploy" aria-labelledby="mx-deploy-title"><div class="section-head"><h2 class="section-title" id="mx-deploy-title">Run it your way.</h2><span class="placeholder">Deployment</span></div><div class="outline">
+<div><strong>Self-hosted</strong><p>Export the source with a Dockerfile, environment variable docs and generated tests. Run it anywhere.</p></div>
+<div><strong>Managed</strong><p>Deploy to Vercel in one step and get a live MCP endpoint, listed under Your MCPs.</p></div>
+<div><strong>Your auth, kept</strong><p>Use a static API key, or pass each caller's bearer token straight through to your API.</p></div>
+</div></section>
+<footer class="footer"><span>altship.</span><nav class="footer-links" aria-label="altship"><a href="/">Home</a><a href="#how">How it works</a><a href="https://pilot.altship.io/mcp" data-dashboard-link>Start building</a></nav><span>Build what's next. Run it your way.</span></footer>
+</div>
+<script src="/js/mcp.js?v=1" defer></script>
+</body>
+</html>

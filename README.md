@@ -8,6 +8,7 @@ Landing page for altship — infrastructure for agents and the web.
 index.html        Markup + meta/SEO tags
 css/style.css      Styles
 js/main.js         Hero slideshow + product hover-preview interactions
+mcp/index.html    altship.io/mcp — MCP Creator landing page (css/mcp.css, js/mcp.js)
 assets/            Logo, favicon, social thumbnail, hero images
 ```
 
@@ -21,13 +22,8 @@ node dev.mjs
 
 then visit `http://localhost:8000`.
 
-In production, `/mcp/` is the MCP Creator landing page from the `altship-mcp`
-repo (`apps/site`), served via the rewrite in `vercel.json`. `dev.mjs` mirrors
-that locally by forwarding `/mcp/*` to its Vite dev server, so run that too:
+`/mcp/` is the MCP Creator landing page. Its "Start building" links go to the
+dashboard at `https://pilot.altship.io/mcp` (`http://localhost:5173/mcp` when
+served from localhost — run the dashboard from the `altship-mcp` repo).
 
-```
-# in your altship-mcp checkout
-cd apps/site && npm run dev   # http://localhost:5174/mcp/
-```
-
-Set `PORT` or `MCP_DEV_URL` to change either address.
+Set `PORT` to change the address.
